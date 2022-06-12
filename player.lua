@@ -143,6 +143,18 @@ local possibleStates = {
   },
 }
 
+function player.getCurrentHealth()
+  return playerState.health
+end
+
+
+function player.getCurrentPower()
+  return playerState.power
+end
+
+function player.getCurrentSpeed()
+  return playerState.speed
+end
 
 function player.load()
   playerState = possibleStates[1]
@@ -159,6 +171,7 @@ function player.levelUp()
 end
 
 function player.shoot()
+  -- player.levelUp()
   bullet.createBulletAt(position.x + playerState.width / 2, position.y, playerState.power)
 end
 

@@ -1,10 +1,12 @@
 local sceneManager = require 'sceneManager'
+local gameState = require 'gameState'
 
 function love.load( ... )
-  sceneManager.changeScene(require 'stage1')
+  sceneManager.changeScene(require 'game')
 end
 
 function love.update(dt)
+  gameState.update(dt)
   sceneManager.currentScene.update(dt)
 end
 
