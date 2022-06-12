@@ -1,4 +1,7 @@
 -- singleton class for player state
+
+local bullet = require "bullet"
+
 local player = {}
 
 local playerState = nil
@@ -156,9 +159,7 @@ function player.levelUp()
 end
 
 function player.shoot()
-  player.levelUp()
-
-  -- createBulletAt(x, y)
+  bullet.createBulletAt(position.x + playerState.width / 2, position.y, playerState.power)
 end
 
 function player.update(dt)
