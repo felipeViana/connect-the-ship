@@ -25,6 +25,7 @@ function shipPart.draw()
   if exists then
     love.graphics.print("new ship part!", windowWidth / 2 - 60, 130)
 
+    -- draw star
     love.graphics.polygon(
       'line',
       position.x + size / 2, position.y, -- A

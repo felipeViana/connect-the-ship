@@ -2,6 +2,7 @@ local sceneManager = require 'sceneManager'
 local gameState = require 'gameState'
 
 function love.load( ... )
+  gameState.load()
   sceneManager.changeScene(require 'game')
 end
 
@@ -11,6 +12,7 @@ function love.update(dt)
 end
 
 function love.draw()
+  -- gameState.draw()
   sceneManager.draw()
 end
 

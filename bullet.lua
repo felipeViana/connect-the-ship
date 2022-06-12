@@ -15,6 +15,15 @@ function bullet.createBulletAt(x, y, power)
   table.insert(bulletList, newBullet)
 end
 
+
+function bullet.destroyAtIndex(index)
+  table.remove(bulletList, index)
+end
+
+function bullet.getBulletList()
+  return bulletList
+end
+
 function bullet.load()
 end
 
